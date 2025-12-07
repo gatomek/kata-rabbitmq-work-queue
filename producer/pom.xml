@@ -46,6 +46,11 @@
             <artifactId>spring-boot-starter-amqp-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>pl.gatomek.rabbitmq.demo</groupId>
+            <artifactId>common-config</artifactId>
+            <version>0.0.1</version>
+        </dependency>
     </dependencies>
 
     <build>
