@@ -12,7 +12,7 @@ public class ScheduledTask {
     private final SendNotificationUseCase sendNotificationUseCase;
 
     @Scheduled(cron = "${producer.cron}")
-    public void task() {
+    public void sendScheduledNotification() {
         sendNotificationUseCase.sendNotification();
     }
 }
