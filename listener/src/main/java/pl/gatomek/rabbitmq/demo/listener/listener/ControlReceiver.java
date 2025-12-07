@@ -16,6 +16,8 @@ import java.time.Duration;
 @Profile("control")
 public class ControlReceiver {
 
+    public static final String ZERO = "0";
+
     @Value("${controlfile.filepath}")
     private String controlFilePath;
 
@@ -23,8 +25,8 @@ public class ControlReceiver {
         log.info("Received: <{}>", message);
         Thread.sleep(Duration.ofSeconds(1));
 
-        String content = new String(Files.readAllBytes(Paths.get(controlFilePath)));
-        if (content.equals("0")) {
+        String content = Files.readString(Paths.get(controlFilePath));
+        if (ZERO.equals(content)) {
             log.info("File content: {}", content);
             log.info("Throwing custom interrupted exception");
             throw new CustomInterruptedException();

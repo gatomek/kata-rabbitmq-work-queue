@@ -8,7 +8,7 @@ import java.time.Duration;
 
 @Slf4j
 @Component
-@Profile( "!control")
+@Profile("!control")
 public class Receiver {
     public void receiveMessage(String message) throws InterruptedException {
         log.info("Received <{}>", message);

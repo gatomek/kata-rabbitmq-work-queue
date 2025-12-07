@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import pl.gatomek.rabbitmq.demo.listener.listener.ControlReceiver;
 
-@Profile( "control")
+@Profile("control")
 @Configuration
 public class ListenerControlConfig {
 
@@ -26,7 +26,7 @@ public class ListenerControlConfig {
         container.setConnectionFactory(connectionFactory);
         container.setQueueNames(SAVE_LOG_WORK_QUEUE);
         container.setMessageListener(listenerAdapter);
-        container.setPrefetchCount( 1);
+        container.setPrefetchCount(1);
         return container;
     }
 }

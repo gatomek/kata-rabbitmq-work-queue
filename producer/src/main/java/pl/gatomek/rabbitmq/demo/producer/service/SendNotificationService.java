@@ -14,7 +14,7 @@ import org.springframework.amqp.core.Queue;
 @RequiredArgsConstructor
 @Service
 @Slf4j
-class SendNotificationService implements SendNotificationUserCase {
+class SendNotificationService implements SendNotificationUseCase {
     private final RabbitTemplate rabbitTemplate;
     private final Queue queue;
 

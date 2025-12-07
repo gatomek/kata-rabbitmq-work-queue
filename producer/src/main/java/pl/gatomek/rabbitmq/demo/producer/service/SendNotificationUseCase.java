@@ -1,5 +1,5 @@
 package pl.gatomek.rabbitmq.demo.producer.service;
 
-public interface SendNotificationUserCase {
+public interface SendNotificationUseCase {
     void sendNotification();
 }
